@@ -103,30 +103,18 @@ void detectar_personaje(personaje_t* personaje, char tipo_personaje){
 //PRE: Recibe un juego_t sin todos sus campos inicializados.
 //POST: Inicializa los tipos de obstaculos: Arbol(A), Piedra(R) o Koala(K), en juego_t. Y cuantos seran inicialmente.
 void inicializar_obstaculos(juego_t* juego){
-    juego->obstaculos->tipo = ARBOL;
-    juego->obstaculos->tipo = PIEDRA;
-    juego->obstaculos->tipo = KOALA;
-
     juego->cantidad_obstaculos = ARBOLES_EN_BOSQUE + PIEDRAS_EN_BOSQUE + KOALA_NOM_NOM;
 }
 
 //PRE: Recibe un juego_t sin todos sus campos inicializados.
 //POST: Inicializa los tipos de herramientas: Vela(V), Bengala(E) o Pila(B), en juego_t. Y cuantas seran inicialmente.
 void inicializar_herramientas(juego_t* juego){
-    juego->herramientas->tipo = VELA;
-    juego->herramientas->tipo = BENGALA;
-    juego->herramientas->tipo = PILA;
-
     juego->cantidad_herramientas = PILAS_RECOLECTABLES + BENGALAS_RECOLECTABLES + VELAS_RECOLECTABLES;
 }
 
 //PRE:Recibe un personaje_t sin todos sus campos inicializados.
 //POST: Inicializa los elementos de la mochila: Linterna(L), Vela(V) o Bengala(E). Y cuantos habra de cada uno segun que oso sea el personaje.
 void inicializar_elementos_mochila(personaje_t* personaje){
-    personaje->mochila->tipo = LINTERNA;
-    personaje->mochila->tipo = VELA;
-    personaje->mochila->tipo = BENGALA;
-
     if(personaje->tipo == POLAR){
         personaje->cantidad_elementos = VELAS_INICIO_POLAR + LINTERNA_INICIAL;
     }
